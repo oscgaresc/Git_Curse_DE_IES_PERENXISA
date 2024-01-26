@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+    <meta charset="utf-8">
+    <title>L'HORTA OEST</title>
+    <meta name="description" content="HTML5">
+    <meta name="author" content="Oscar Garcia">
+    <meta name="author" content="En nuestra cesta puedes elegir entre
+    una gran diversidad de productos de temporada de la huerta con
+    calidad propia, sin intermediarios a un precio justo!">
+    <link rel="stylesheet" href="css/estils.css">
+  </head>
+  <!-- cos de la pàgina -->
+  <body>
+    <!-- Estructura d'inici de la pàgina
+    <div id="page">
+      <div id="header">Capçalera</div>
+      <div id="nav">Barra de navegació</div>
+      <div id="content">Informació principal</div>
+      <div id="aside">Panell lateral</div>
+      <div id="footer">Peu de pàgina</div>
+      </div>--->
+    <!-- capçalera de la pàgina amb el títol del web -->
+    <header>
+      L'HORTA OEST!
+      <nav id="mobile">
+        <div>
+          <i class="imatge-menu"></i>
+          <ul>
+            <li class="categoria">
+              <a href="#">Nuestro huerto</a>
+            </li>
+            <li class="categoria">
+              <a href="#">Produtos</a>
+            </li>
+            <li class="categoria">
+              <a href="#">Ofertas</a>
+            </li>
+            <li class="categoria">
+              <a href="#">Accesorios</a>
+            </li>
+            <li class="categoria">
+              <a href="#">Sobre nosotros...</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- barra del navegació -->
+    <nav id="desktop">
+      <!-- creant el navegador amb l'etiqueta ul (llistat desordenada)-->
+      <ul>
+        <li class="categoria"> 
+          <a href="#">Nuestro huerto</a>
+        </li>
+        <li class="categoria"> 
+          <a href="#">Productos</a>
+          <!-- provant un llistat desordenat (he fet convinacions amb <ol> però no queda bé) -->
+          <ul class="submenu">
+            <li><a href="#">Verduras</a></li>
+            <li><a href="#">Frutas</a></li>
+            <li><a href="#">Cereales y leguminosas</a></li>
+          </ul>
+        </li>
+        <li class="categoria"> 
+          <a href="#">Ofertas</a>
+        </li>
+        <li class="categoria"> 
+          <a href="#">Accesorios</a>
+          <!-- provant un llistat ordenat -->
+          <ul class="submenu">
+            <li><a href="#">Poda y tratamiento</a></li>
+            <li><a href="#">Pulverizaciones</a></li>
+            <li><a href="#">Reparaciones</a></li>
+            <li><a href="#">Más accesorios</a></li>
+          </ul>
+        </li>
+        <li class="categoria">
+          <a href="#">Sobre nosotros...</a>
+          <!-- provant un llistat desordenat -->
+          <ul class="submenu">
+              <li><a href="#">Contacto</a></li>
+              <li><a href="#">Dónde estamos</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Contingut de la part principal del web amb el lateral -->
+    <div id="contingut">
+      <!-- Secció del Lateral  -->
+      <aside class="col-right"> 
+        <h1><i class="imatge-money"></i> Nuestros apadrinados </h1>
+        <h2>De valencia:</h2>
+        <p><a href="https://www.facebook.com/www.huertavalenciana.es/"> La huerta valenciana </a></p>
+        <h2>De Madrid:</h2>
+        <p><a href="https://www.tuhuertaonline.es/"> Tu huerta online </a></p>
+      </aside>
+      <div class="col-left">
+        <!--Secció 1 del contingut principal-->
+        <h1><i class="imatge-news"></i> Novedades</h1>
+        <img src="/images/naraja.png" alt="Nuestro producto estrella">
+        <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p>        
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper mauris nisl, ac euismod erat dictum vel. Nunc lobortis, lectus vitae pulvinar pellentesque, eros sapien posuere lacus, et eleifend risus nisi vel arcu. Sed porttitor eros lorem, ac pulvinar turpis scelerisque at. Praesent finibus nulla sit amet tortor varius, non elementum purus viverra. Suspendisse quis ipsum orci. Praesent gravida turpis felis, eu blandit magna egestas nec. Duis vulputate ornare nisi eu ultricies. Aliquam blandit luctus enim eget pharetra. Sed eleifend, tellus sed auctor condimentum, justo urna mollis enim, ut consectetur tortor orci et leo. In vitae magna in velit dapibus sollicitudin. Nam vitae dui convallis, tempor lacus et, placerat nibh. Vivamus vehicula, nunc lacinia venenatis tempor, purus magna euismod diam, a volutpat lacus ligula nec ante. Cras eget ultrices urna. Nullam at massa rhoncus, malesuada massa eu, vulputate quam. Ut vel rutrum justo. Donec quis lorem quam.</p>
+        
+        <!--Secció 2 del contingut principal-->
+        <h1><i class="imatge-contact"></i> Contactar</h1>
+        <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p>        
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper mauris nisl, ac euismod erat dictum vel. Nunc lobortis, lectus vitae pulvinar pellentesque, eros sapien posuere lacus, et eleifend risus nisi vel arcu. Sed porttitor eros lorem, ac pulvinar turpis scelerisque at. Praesent finibus nulla sit amet tortor varius, non elementum purus viverra. Suspendisse quis ipsum orci. Praesent gravida turpis felis, eu blandit magna egestas nec. Duis vulputate ornare nisi eu ultricies. Aliquam blandit luctus enim eget pharetra. Sed eleifend, tellus sed auctor condimentum, justo urna mollis enim, ut consectetur tortor orci et leo. In vitae magna in velit dapibus sollicitudin. Nam vitae dui convallis, tempor lacus et, placerat nibh. Vivamus vehicula, nunc lacinia venenatis tempor, purus magna euismod diam, a volutpat lacus ligula nec ante. Cras eget ultrices urna. Nullam at massa rhoncus, malesuada massa eu, vulputate quam. Ut vel rutrum justo. Donec quis lorem quam.</p>
+    </div>    
+  </body>
+
+  <footer> <!-- peu de la pàgina -->
+    
+</footer>
+</html>

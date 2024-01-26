@@ -1,0 +1,283 @@
+* { margin: 0px; padding: 0px; }
+
+Body {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*--------------------------------------------*/
+/*--------------- MENÚ NAVEGACIÓ -------------*/
+/*--------------------------------------------*/
+nav#desktop {
+  position: absolute;
+  width: 100%; /* contingut del nav en tota la amplada del web*/
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Iniciant la barra del menú*/
+nav#desktop ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* donant-li forma a la barra del menú*/
+nav#desktop > ul {
+  width: 100%;
+  height: 32px;
+  background-color: #666666;
+  color: #eee;
+}
+
+/* Configurant les classes "categoria" de <li> del menú desde l'esquerra en horitzontal amb float */
+nav#desktop li.categoria {
+  float: left;
+}
+
+/* Afegisc un canvi amb la psudoclasse ::hover en els "hyperlinks" <a> de les classes "categoria" de <li> quan passe el ratolí per damunt*/
+nav#desktop li.categoria:hover > a {
+  padding: 10px 20px; /* aumente un poc el padding */
+  text-transform: uppercase; /* transforme el text en majúscules perquè l'usuari sapiga on es troba */
+}
+
+/*Torne a afegir la pseudoclase anterior pero esta volta perquè aparega les llistes del submenú <ul>*/
+nav#desktop li.categoria:hover ul.submenu {
+  height: 125px; /*ajustant l'altura del llistat*/
+}
+
+/* Configurant el submenu <ul> perquè no aparega per pantalla amb overflow */
+nav#desktop li.categoria ul.submenu {
+  position: absolute;
+  height: 0px;
+  overflow: hidden; 
+}
+
+/* donant-li forma als "hyperlinks" de navegació*/
+nav#desktop a {
+  color: #eee;
+  background-color: #666666;
+  text-decoration: none;
+  width: 160px; /* Amplada dels hyperlinks de navegació*/
+  padding: 7px 20px;
+  display: block;
+  text-align: center;
+  cursor: pointer; /*Enllaços, apareix la mà quan pase el ratolí per damunt del "hyperlink"*/
+}
+
+/* Configurant el ratoli al passar per damunt dels "hyperlinks" amb la pseudoclase a:hover */
+nav#desktop a:hover {
+  color: #fff;
+  background-color: #466d58; /* Afegeisc un color relacionat amb la capçalera*/
+}
+
+/*---------------------------------------------------------*/
+/* AFEGINT MENU (NAV#MOBILE) QUAN CANVIA L'AMPLADA DEL WEB */
+/*---------------------------------------------------------*/
+/* El nav (mobile) está a la dreta de la capçalera al reduir el web*/
+nav#mobile {
+  display: none; /* ---------- es queda fixe -----------------*/
+  float: right; /* afegim el noy menú a la dreta de la capçalera*/
+}
+/* Configure com ha de ser el nou menú */
+nav#mobile ul {
+  margin: 0px;
+  height: 0px;
+  overflow: hidden;
+  list-style-type: none;
+  position: absolute;
+  right: 10px;
+  top: 40px;
+}
+
+nav#mobile ul a {
+  background-color: #666666;
+  color: #eee;
+  text-decoration: none;
+  width: 160px;
+  padding: 7px 20px;
+  display: block;
+  text-align: center;
+  cursor: pointer; /* Continuem amb la mà al passar per damunt amb el ratolí */
+  font-size: 0.6em; /*Reduint el tamany de la font*/
+  font-weight: normal;
+}
+
+nav#mobile ul a:hover {
+  background-color: #466d58;
+  color: white;
+  text-transform: uppercase; /* transforme el text en majúscules perquè l'usuari sapiga on es troba */
+}
+nav#mobile:hover ul {
+  height: auto;
+}
+
+/*--------------------------------------------*/
+/*-- CANVIANT LA GRANDARIA DEL WEB (1024px) --*/
+/*--------------------------------------------*/
+/* Si baixe l'amplada del web per baix de 1024 desapareix la nav#desktop i apareix el nav#mobile
+Utilitze @media per a fer-ho possible*/
+@media (max-width: 1024px) {
+  nav#desktop {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  nav#mobile {
+    display: block;
+  }
+}
+
+/* Per a bloquejar la imatge menu.png a la capçalera quan i puga obrir els hyperlinks <a> */
+i {
+  display: inline-block;
+}
+/* Afegint un símbol del menú (menu.png) al un nav de la capçalera quan canvia l'ampladad del wer (>1024px) */
+.imatge-menu {
+  background-image: url("../images/menu.png");
+  background-position: 0px -30px;
+  height: 50px;
+  width: 54px;
+}
+
+.imatge-news {
+  background-image: url("../images/news.png");
+  background-position: 0px -90px;
+  height: 30px;
+  width: 39px;
+}
+
+.imatge-money {
+  background-image: url("../images/money.png");
+  background-position: 0px -100px;
+  height: 50px;
+  width: 54px;
+}
+
+.imatge-contact {
+  background-image: url("../images/contact.png");
+  background-position: 0px 0px;
+  height: 30px;
+  width: 30px;
+}
+
+
+/*--------------------------------------------*/
+/*------------- Contingut Lateral ------------*/
+/*--------------------------------------------*/
+#contingut .col-right {
+  box-sizing: border-box;
+  height: 100%;
+  width: 30%;
+  padding: 35px 7px;
+  border-radius: 4px;
+  border: 1px solid #bbb; /* Faig un contorn per vore'l*/
+  float: right;
+  cursor: pointer;/*----després es pot valorar si fem ús----*/
+}
+#contingut .col-right h1 {
+  background-color: #58996c;
+  font-size: 1.6em;
+}
+/*--------------------------------------------*/
+/*--- CANVIANT LA GRANDARIA DEL WEB (800px) --*/
+/*--------------------------------------------*/
+/* Si baixe l'amplada del web per baix de 800 el contingut lateral pasa a la dreta damunt del contingut principal
+Utilitze @media per a fer-ho possible llevant el float i amb width tota l'amplada*/
+@media (max-width: 800px) {
+  #contingut .col-right {
+    float: none; 
+    width: 100%;
+  }
+}
+/*--------------------------------------------*/
+/*------------ CONTINGUT PRINCIPAL -----------*/
+/*--------------------------------------------*/
+#contingut .col-left {
+  box-sizing: border-box;
+  margin-right: 30%;
+  width: 70%;
+  padding: 35px 10px;
+}
+#contingut .col-left h1 {
+  background-color: #58996c;
+  font-size: 1.6em;
+}
+
+#contingut .col-left img {
+  float: right;
+  margin-top: 7px;
+  width: 25%;
+}
+.col-left::after {
+  overflow: auto;
+}
+/* Si baixe l'amplada del web per baix de 800 el contingut principal pasa baix del contingut lateral
+Utilitze @media per a fer-ho possible llevant el margin dret i amb width tota l'amplada */
+@media (max-width: 800px) {
+  #contingut .col-right {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+/*--------------------------------------------*/
+/*----------------- TAULA ----------------*/
+/*--------------------------------------------*/
+#taula {
+  box-sizing: border-box;
+  margin-right: 20%;
+  width: 70%;
+  padding:45px 10px;
+}
+ 
+#taula p{
+  padding-top: 1%;
+}
+
+table {
+  border-collapse: collapse;
+  margin-left: 10%;
+  margin-top: 3%;
+  width: 80%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color: coral;}
+
+/*--------------------------------------------*/
+/*----------------- FORMULARI ----------------*/
+/*--------------------------------------------*/
+#formulari {
+  box-sizing: border-box;
+  margin-right: 20%;
+  width: 70%;
+  padding:45px 10px;
+}
+#formulari p{
+  padding: 5px;
+}
+
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+/*--------------------------------------------*/
+/*----------------- CAPÇALERA ----------------*/
+/*--------------------------------------------*/
+header {
+  padding: 12px 30px;
+  font-size: 1.8em;
+  color: #444;
+  background-color: #c8f9d0;
+  font-weight: bold;    
+  text-shadow: 1px 1px 2px #05f942;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border: 2px solid rgb(150, 247, 147); 
+}
