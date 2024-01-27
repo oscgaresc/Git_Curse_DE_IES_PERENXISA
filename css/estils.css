@@ -281,3 +281,18 @@ header {
   font-family: Georgia, "Times New Roman", Times, serif;
   border: 2px solid rgb(150, 247, 147); 
 }
+
+/*--------------------------------------------*/
+/*--------------- PEU DE PÀGINA --------------*/
+/*--------------------------------------------*/
+/*Tenint en compte les indicacions de l'exercici*/
+footer {
+  color: #eee;
+  background-color: #666;
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  padding: 5px;
+  text-align: center;
+}
